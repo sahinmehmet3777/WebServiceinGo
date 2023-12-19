@@ -1,0 +1,140 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Basit Go API",
+      "version": "1.0"
+    },
+    "paths": {
+      "/": {
+        "get": {
+          "summary": "Gets the home page message",
+          "responses": {
+            "200": {
+              "description": "Success",
+              "schema": {
+                "type": "string",
+                "example": "Hello, this is the home page!"
+              }
+            }
+          }
+        },
+        "post": {
+          "summary": "Method not allowed",
+          "responses": {
+            "405": {
+              "description": "Method Not Allowed",
+              "schema": {
+                "type": "string",
+                "example": "Method not allowed."
+              }
+            }
+          }
+        },
+        "put": {
+          "summary": "Method not allowed",
+          "responses": {
+            "405": {
+              "description": "Method Not Allowed",
+              "schema": {
+                "type": "string",
+                "example": "Method not allowed."
+              }
+            }
+          }
+        },
+        "delete": {
+          "summary": "Method not allowed",
+          "responses": {
+            "405": {
+              "description": "Method Not Allowed",
+              "schema": {
+                "type": "string",
+                "example": "Method not allowed."
+              }
+            }
+          }
+        }
+      },
+      "/post": {
+        "post": {
+          "summary": "Creates a new post",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/x-www-form-urlencoded": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "username": {
+                      "type": "string",
+                      "example": "admin"
+                    },
+                    "password": {
+                      "type": "string",
+                      "example": "password"
+                    }
+                  },
+                  "required": [
+                    "username",
+                    "password"
+                  ]
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Post created",
+              "schema": {
+                "type": "string",
+                "example": "POST request received successfully."
+              }
+            },
+            "400": {
+              "description": "Bad Request",
+              "schema": {
+                "type": "string",
+                "example": "Error parsing form data."
+              }
+            }
+          }
+        },
+        "get": {
+          "summary": "Method not allowed",
+          "responses": {
+            "405": {
+              "description": "Method Not Allowed",
+              "schema": {
+                "type": "string",
+                "example": "Method not allowed."
+              }
+            }
+          }
+        },
+        "put": {
+          "summary": "Method not allowed",
+          "responses": {
+            "405": {
+              "description": "Method Not Allowed",
+              "schema": {
+                "type": "string",
+                "example": "Method not allowed."
+              }
+            }
+          }
+        },
+        "delete": {
+          "summary": "Method not allowed",
+          "responses": {
+            "405": {
+              "description": "Method Not Allowed",
+              "schema": {
+                "type": "string",
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
